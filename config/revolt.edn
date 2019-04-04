@@ -1,0 +1,8 @@
+{:revolt.task/info  {:name "revolt-catapulte-task"
+                     :package defunkt
+                     :version "0.1.1-SNAPSHOT"
+                     :description "Task to install/deploy a jar"}
+ :revolt.task/clean {:extra-paths ["dist"]}
+ :revolt.task/jar   {:exclude-paths #{"config"}}
+
+ :revolt.plugin/nrepl {:port 5600}}
