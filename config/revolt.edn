@@ -1,6 +1,6 @@
 {:revolt.task/info  {:name "revolt-catapulte-task"
                      :package defunkt
-                     :version "0.1.1"
+                     :version "0.1.2"
                      :description "Task to install/deploy a jar"}
  :revolt.task/clean {:extra-paths ["dist"]}
  :revolt.task/jar   {:exclude-paths #{"config"}}

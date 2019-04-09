@@ -4,7 +4,7 @@
   <name>revolt-catapulte-task</name>
   <groupId>defunkt</groupId>
   <artifactId>revolt-catapulte-task</artifactId>
-  <version>0.1.1</version>
+  <version>0.1.2</version>
   <description>Task to install/deploy a jar</description>
   <licenses>
     <license>

@@ -102,7 +102,7 @@
             coords   (coordinates-from-pom-file pom-file)
             version  (second coords)]
 
-        (if-not (.exists (io/file jar-file))
+        (if-not (and jar-file (.exists (io/file jar-file)))
           (log/error "Artifact file not found:" jar-file)
           (utils/timed
            (str "INSTALLING to local .m2 (" (str/join "-" coords) ")")
