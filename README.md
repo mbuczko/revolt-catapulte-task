@@ -28,16 +28,16 @@
 (t/require-task ::catapulte/install)
 
 ;; to install jar to local .m2 repository
-(install)
+(install {:jar-file "dist/foo-1.1.0.jar"})
 
 ;; to deploy to clojars (note CLOJARS_USER and CLOJARS_PASS environmental variables need to be set)
 ;; also pom.xml file has to be generated before, eg. by clj -Spom
 
 ;; if :sign-key was configured jar will be signed first
-(deploy)
+(deploy {:jar-file "dist/foo-1.1.0.jar"})
 
 ;; enforce no signing
-(deploy {:sign-key nil})
+(deploy {:jar-file "dist/foo-1.1.0.jar" :sign-key nil})
 ```
 
 ## using a task from command-line
@@ -45,4 +45,16 @@
 `clj -A:dev -t revolt.catapulte.task/install`
 
 `clj -A:dev -t revolt.catapulte.task/deploy:sign-key=xxxx`
+
+Having `info` task configured, it's easy to compose tasks together:
+
+revolt.edn:
+``` clojure
+:revolt.task/info  {:name "foo" :package bar :version "0.1.1"}
+:revolt.task/clean {:extra-paths ["dist"]}
+```
+
+command:
+`clj -A:dev -t clean,info,jar,revolt.catapulte.task/install`
+
 
