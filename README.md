@@ -7,7 +7,7 @@
 ``` clojure
 {:paths ["resources"]
  :aliases {:dev {:extra-deps  {defunkt/revolt {:mvn/version "1.3.0-SNAPSHOT"}
-                               defunkt/revolt-catapulte-task {:mvn/version "0.1.1-SNAPSHOT"}}
+                               defunkt/revolt-catapulte-task {:mvn/version "0.1.1"}}
                  :main-opts   ["-m" "revolt.bootstrap"]}}}
 ```
 
