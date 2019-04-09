@@ -1,3 +1,5 @@
+[![Clojars Project](https://img.shields.io/clojars/v/defunkt/revolt-catapulte-task.svg)](https://clojars.org/defunkt/revolt-catapulte-task)
+
 # JAR files local installation / deployment with Revolt
 
 ## deps.edn
