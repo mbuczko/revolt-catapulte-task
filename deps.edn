@@ -1,8 +1,8 @@
 {:paths ["src" "config"]
  :deps  {com.cemerick/pomegranate {:mvn/version "1.1.0"}
          org.clojure/data.xml {:mvn/version "0.2.0-alpha5"}
-         defunkt/revolt {:mvn/version "1.3.0"}}
- :aliases {:dev {:extra-deps  {cider/cider-nrepl {:mvn/version "0.21.0"}
-                               refactor-nrepl {:mvn/version "2.4.0"}}
+         defunkt/revolt {:mvn/version "1.3.5"}}
+ :aliases {:dev {:extra-deps  {cider/cider-nrepl {:mvn/version "0.25.4"}
+                               refactor-nrepl/refactor-nrepl {:mvn/version "2.5.0"}}
                  :main-opts   ["-m" "revolt.bootstrap"
                                "-c" "revolt.edn"]}}}

@@ -13,7 +13,7 @@
   {"clojars" {:url "https://clojars.org/repo"
               :checksum :warn
               :username (System/getenv "CLOJARS_USER")
-              :password (System/getenv "CLOJARS_PASS")}})
+              :password (System/getenv "CLOJARS_TOKEN")}})
 
 (def artifact-id-tag :xmlns.http%3A%2F%2Fmaven.apache.org%2FPOM%2F4.0.0/artifactId)
 (def group-id-tag :xmlns.http%3A%2F%2Fmaven.apache.org%2FPOM%2F4.0.0/groupId)
@@ -89,7 +89,7 @@
                         :jar-file "location of jar file to deploy"
                         :pom-file "location of pom file to deploy"
                         :sign-key "GPG key to use when signing or nil if no signing is needed"
-                        :repository "repository setting. clojars settings are used by default with CLOJARS_USER and CLOJARS_PASS env variables."))))
+                        :repository "Repository setting. Clojars settings are used by default based on CLOJARS_USER and CLOJARS_TOKEN env variables."))))
 
 (defmethod create-task ::install
   [_ opts classpaths target]
