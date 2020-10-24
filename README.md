@@ -30,7 +30,7 @@
 ;; to install jar to local .m2 repository
 (install {:jar-file "dist/foo-1.1.0.jar"})
 
-;; to deploy to clojars (note CLOJARS_USER and CLOJARS_PASS environmental variables need to be set)
+;; to deploy to clojars (note CLOJARS_USER and CLOJARS_TOKEN environmental variables need to be set)
 ;; also pom.xml file has to be generated before, eg. by clj -Spom
 
 ;; if :sign-key was configured jar will be signed first
